@@ -158,3 +158,34 @@
 
 ;; Package zygospore
 (global-set-key (kbd "C-x 1") 'zygospore-toggle-delete-other-windows)
+
+
+;;smooth scrolling
+(setq redisplay-dont-pause t
+      scroll-margin 1
+      scroll-step 1
+      scroll-conservatively 10000
+      scroll-preserve-screen-position 1)
+
+;;Change yes-or-no to y-or-n
+(fset `yes-or-no-p 'y-or-n-p)
+
+;; disable auto-save and auto-backup
+(setq auto-save-default nil)
+(setq make-backup-files nil)
+
+;;Line numbers
+;; Set Linum-Mode on
+(global-linum-mode t)
+(setq linum-format "%d ")
+
+;;dont exit emacs mistakely
+(global-set-key "\C-x\C-c" nil)
+(global-set-key "\C-z" nil)
+
+;;highlight symbol
+(require 'highlight-symbol)
+
+(global-set-key (kbd "<f1>") 'highlight-symbol-at-point)
+(global-set-key (kbd "<f2>") 'highlight-symbol-next)
+(global-set-key (kbd "<f3>") 'highlight-symbol-prev)
