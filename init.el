@@ -180,7 +180,7 @@
 (setq linum-format "%d ")
 
 ;;dont exit emacs mistakely
-(global-set-key "\C-x\C-c" nil)
+;;(global-set-key "\C-x\C-c" nil)
 (global-set-key "\C-z" nil)
 
 ;;highlight symbol
